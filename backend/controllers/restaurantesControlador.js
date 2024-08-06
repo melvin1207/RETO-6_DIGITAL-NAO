@@ -149,6 +149,31 @@ const destroyRestaurante = asyncHandler(async(req, res) =>{
   }
 })
 
+const restaurantesCercanos = asyncHandler(async(req, res) =>{
+  const restauranteOriginal = await Restaurante.findById(req.params.id)
+  let restaurantesOriginal = await Restaurante.find({})
+
+  restaurantesOriginal = restaurantesOriginal.filter((restaurante) => String(req.params.id) !== String(restaurante._id))
+
+  let restaurantes = []
+
+  restaurantesOriginal.forEach(restaurante => {
+    let theta = restauranteOriginal.longitud - restaurante.longitud
+    let distance = 60 * 1.1515 * (180/Math.PI) * Math.acos(
+      Math.sin(restauranteOriginal.latitud * (Math.PI / 180)) * Math.sin(restaurante.latitud * (Math.PI / 180)) + 
+      Math.cos(restauranteOriginal.latitud * (Math.PI / 180)) * Math.cos(restaurante.latitud * (Math.PI / 180)) * Math.cos(theta * (Math.PI / 180))
+    )
+
+    d = Math.round(distance * 1.609344, 2)
+
+    if(d <= 109){
+      restaurantes.push(restaurante)
+    }
+  })
+
+  res.status(200).json(restaurantes)
+})
+
 module.exports = {
   crearRestaurante,
   obtenerRestaurantes,
@@ -158,5 +183,6 @@ module.exports = {
   updateRestauranteDislike,
   softDeleteRestaurante,
   activateRestaurante,
-  destroyRestaurante
+  destroyRestaurante,
+  restaurantesCercanos
 }
