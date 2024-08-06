@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
-  first_name:{
+  nombre:{
     type: String,
     required: [true, 'Por favor ingrese el nombre'],
     maxlength : [ 50, 'El nombre no puede exceder los 50 caracteres'],
     minlength : [ 3, 'El nombre debe contener 3 o más caracteres'] 
   },
-  last_name:{
+  apellido:{
     type: String,
     required: [true, 'Por favor ingresa el apellido'],
     maxlength : [ 100, 'Los apellidos no pueden exceder los 100 caracteres'],
@@ -27,4 +27,4 @@ const userSchema = mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Usuario', userSchema)
