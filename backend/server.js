@@ -18,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/usuarios', require('./routes/usuarioRutas'))
+app.use('/api/restaurantes', require('./routes/restaurenteRutas'))
 
 app.use(errorHandler)
 

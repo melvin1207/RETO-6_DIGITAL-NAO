@@ -36,6 +36,10 @@ const userSchema = mongoose.Schema({
     type: Number,
     required: [true, 'Indica la puntuación para la pelicula del 1 al 10'],
     default: 0
+  },
+  activo:{
+    type: Boolean,
+    default: true
   }
 }, {
   timestamps: true
