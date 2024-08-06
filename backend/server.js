@@ -17,6 +17,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+app.use('/api/usuarios', require('./routes/usuarioRutas'))
+
 app.use(errorHandler)
 
 //se inicializa el servidor
