@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api/usuarios', require('./routes/usuarioRutas'))
 app.use('/api/restaurantes', require('./routes/restaurenteRutas'))
 app.use('/api/comentarios', require('./routes/comentariosRutas'))
+app.use('/api/favoritos', require('./routes/favoritosRutas'))
 
 app.use(errorHandler)
 
