@@ -41,6 +41,6 @@ El funcionamiento se basa en la creación y logueo de usuarios, una vez logueado
 
 **FUNCIONAMIENTO DE LOS ENDPOINTS**
 Se agrega el link a swagger:
-https://app.swaggerhub.com/apis/MELSAVA1207/TATTLER/1.0.0
+https://app.swaggerhub.com/apis-docs/MELSAVA1207/TATTLER/1.0.1#/
 
 

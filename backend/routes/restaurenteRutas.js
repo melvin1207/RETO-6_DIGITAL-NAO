@@ -24,12 +24,12 @@ router.post('/', protect, crearRestaurante)
 router.get('/', protect, obtenerRestaurantes)
 router.get('/busqueda', protect, obtenerRestaurante)
 router.get('/:id', protect, restaurantesCercanos)
-router.patch( '/update/:id', protect, updateRestaurante)
-router.patch( '/activate/:id', protect, activateRestaurante)
+router.patch('/update/:id', protect, updateRestaurante)
+router.patch('/activate/:id', protect, activateRestaurante)
 router.patch('/like/:id', protect, updateRestauranteLike)
 router.patch('/dislike/:id', protect, updateRestauranteDislike)
-router.delete('/:id', protect, softDeleteRestaurante)
-router.delete('/destroy/:id', protect, destroyRestaurante)
+router.delete('/desactivate/:id', protect, softDeleteRestaurante)
+router.delete('/:id', protect, destroyRestaurante)
 
 //se exporta el router de restaurantes
 module.exports = router

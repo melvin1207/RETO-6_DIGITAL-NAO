@@ -23,7 +23,7 @@ const {
 router.post('/', crearUsuario)
 router.post('/login', loginUsuario)
 router.get('/datos', protect, datosUsuario)
-router.patch('/desactivate/:id', protect, userProtect, updateUsuario)
+router.patch('/:id', protect, userProtect, updateUsuario)
 router.patch('/activate/:id', protect, userProtect, activateUsuario)
 router.delete('/:id', protect, userProtect, softDeleteUsuario)
 router.delete('/destroy/:id', protect, userProtect, destroyUsuario)
