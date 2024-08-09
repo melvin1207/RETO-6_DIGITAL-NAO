@@ -8,6 +8,7 @@ const errorHandler = (err, req, res, next) =>{
   })
 }
 
+//se exporta la función
 module.exports = {
   errorHandler
 }
