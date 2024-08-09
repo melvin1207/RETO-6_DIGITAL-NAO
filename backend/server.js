@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-//se importan las rutas
+//se importan las rutas para cada uno de los modelos
 app.use('/api/usuarios', require('./routes/usuarioRutas'))
 app.use('/api/restaurantes', require('./routes/restaurenteRutas'))
 app.use('/api/comentarios', require('./routes/comentariosRutas'))

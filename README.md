@@ -40,5 +40,7 @@ El funcionamiento se basa en la creación y logueo de usuarios, una vez logueado
  ![Prueba de conexión una vez inicializado el servidor](https://prod-files-secure.s3.us-west-2.amazonaws.com/10a51d03-5d4e-47cf-9817-0c886ba89e95/23db3c18-ae29-4770-9eb9-cdb2fa602107/Untitled.png)
 
 **FUNCIONAMIENTO DE LOS ENDPOINTS**
+Se agrega el link a swagger:
+https://app.swaggerhub.com/apis/MELSAVA1207/TATTLER/1.0.0
 
 
